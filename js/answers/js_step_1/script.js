@@ -29,7 +29,6 @@ const personalMovieDB = {
 };
 
 
-let movies = {};
 for (let index = 0; index < 2; index++) {
     let lastFilm  = prompt('Один из последних просмотренных фильмов?'),
         rate  = +prompt('На сколько оцените его?');

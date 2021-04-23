@@ -17,14 +17,14 @@
     }
 Проверить, чтобы все работало без ошибок в консоли */
 
-let numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?')
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
 
-let personalMovieDB = {
+const personalMovieDB = {
     'count': numberOfFilms,
-    'movies': null,
-    'actors': null,
-    'genres': null,
+    'movies': {},
+    'actors': {},
+    'genres': [],
     'privat': false
 };
 
@@ -32,11 +32,11 @@ let personalMovieDB = {
 let movies = {};
 for (let index = 0; index < 2; index++) {
     let lastFilm  = prompt('Один из последних просмотренных фильмов?'),
-        rate  = prompt('На сколько оцените его?');
-    movies[lastFilm]=rate;
+        rate  = +prompt('На сколько оцените его?');
+        personalMovieDB.movies[lastFilm]=rate;
 }
 
-console.log(movies);
+console.log(personalMovieDB);
 
 
 
